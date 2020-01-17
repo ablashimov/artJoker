@@ -10,7 +10,8 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
-Route::get('', [ 'uses' => 'ExportController@welcome', 'as' => 'home'] );
-Route::get('view', [ 'uses' => 'ExportController@viewStudents', 'as' => 'view'] );
-Route::get('export', [ 'uses' => 'ExportController@export', 'as' => 'export'] );
+Route::get('', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'students', 'as' => 'students.'], function () {
+    Route::get('/', 'StudentController@index')->name('index');
+});
+Route::get('export', ['uses' => 'ExportController@export', 'as' => 'export']);

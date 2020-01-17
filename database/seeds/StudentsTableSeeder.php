@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Student;
 use Illuminate\Database\Seeder;
 
 class StudentsTableSeeder extends Seeder
@@ -14,905 +15,809 @@ class StudentsTableSeeder extends Seeder
         {
             $students = [
                 [
-                    "surname"     => "Dare",
-                    "firstname"   => "Koby",
+                    "surname" => "Dare",
+                    "first_name" => "Koby",
                     "nationality" => "UK",
-                    "email"       => "Astrid@salma.com",
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Astrid@salma.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Dicki",
-                    "firstname"   => "Kelli",
+                    "surname" => "Dicki",
+                    "first_name" => "Kelli",
                     "nationality" => "UK",
-                    "email"       => "Ivory@ashtyn.me"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Ivory@ashtyn.me",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Carter",
-                    "firstname"   => "Golden",
+                    "surname" => "Carter",
+                    "first_name" => "Golden",
                     "nationality" => "UK",
-                    "email"       => "Ari@flo.tv"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Ari@flo.tv",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Koch",
-                    "firstname"   => "Emory",
+                    "surname" => "Koch",
+                    "first_name" => "Emory",
                     "nationality" => "UK",
-                    "email"       => "Gene_Hilpert@laurie.io"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Gene_Hilpert@laurie.io",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Kilback",
-                    "firstname"   => "Marjorie",
+                    "surname" => "Kilback",
+                    "first_name" => "Marjorie",
                     "nationality" => "Dominican Republic",
-                    "email"       => "Antonia.Hauck@giuseppe.tv"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Antonia.Hauck@giuseppe.tv",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Hoeger",
-                    "firstname"   => "Ernest",
+                    "surname" => "Hoeger",
+                    "first_name" => "Ernest",
                     "nationality" => "Panama",
-                    "email"       => "Maritza_Mann@abelardo.tv"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Maritza_Mann@abelardo.tv",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Hudson",
-                    "firstname"   => "Rebecca",
+                    "surname" => "Hudson",
+                    "first_name" => "Rebecca",
                     "nationality" => "Chile",
-                    "email"       => "Reynold_Ferry@bennett.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Reynold_Ferry@bennett.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Hirthe",
-                    "firstname"   => "Josefina",
+                    "surname" => "Hirthe",
+                    "first_name" => "Josefina",
                     "nationality" => "Kyrgyzstan",
-                    "email"       => "Augustine@cassie.tv"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Augustine@cassie.tv",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Ebert",
-                    "firstname"   => "Wanda",
+                    "surname" => "Ebert",
+                    "first_name" => "Wanda",
                     "nationality" => "Palau",
-                    "email"       => "Amina.Farrell@charlie.net"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Amina.Farrell@charlie.net",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Denesik",
-                    "firstname"   => "Burnice",
+                    "surname" => "Denesik",
+                    "first_name" => "Burnice",
                     "nationality" => "Kuwait",
-                    "email"       => "Tyrese@don.ca"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Tyrese@don.ca",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Moen",
-                    "firstname"   => "Harold",
+                    "surname" => "Moen",
+                    "first_name" => "Harold",
                     "nationality" => "Vatican City",
-                    "email"       => "Neil@merlin.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Neil@merlin.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Spencer",
-                    "firstname"   => "Brennon",
+                    "surname" => "Spencer",
+                    "first_name" => "Brennon",
                     "nationality" => "Cambodia",
-                    "email"       => "Alexandria@eva.io"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Alexandria@eva.io",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Ziemann",
-                    "firstname"   => "Stanley",
+                    "surname" => "Ziemann",
+                    "first_name" => "Stanley",
                     "nationality" => "Azerbaijan",
-                    "email"       => "Micaela@millie.info"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Micaela@millie.info",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Rempel",
-                    "firstname"   => "Forest",
+                    "surname" => "Rempel",
+                    "first_name" => "Forest",
                     "nationality" => "Seychelles",
-                    "email"       => "Chyna_Nolan@elody.org"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Chyna_Nolan@elody.org",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Zboncak",
-                    "firstname"   => "Gregory",
+                    "surname" => "Zboncak",
+                    "first_name" => "Gregory",
                     "nationality" => "Kazakhstan",
-                    "email"       => "Annamae_Runte@soledad.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Annamae_Runte@soledad.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Weimann",
-                    "firstname"   => "Valentine",
+                    "surname" => "Weimann",
+                    "first_name" => "Valentine",
                     "nationality" => "Turks and Caicos Islands",
-                    "email"       => "Jeromy_Blick@katrine.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Jeromy_Blick@katrine.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Waelchi",
-                    "firstname"   => "Alexandria",
+                    "surname" => "Waelchi",
+                    "first_name" => "Alexandria",
                     "nationality" => "People's Democratic Republic of Yemen",
-                    "email"       => "Everette_Torphy@halle.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Everette_Torphy@halle.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Altenwerth",
-                    "firstname"   => "Florian",
+                    "surname" => "Altenwerth",
+                    "first_name" => "Florian",
                     "nationality" => "Wake Island",
-                    "email"       => "Adelbert.Ryan@francisca.org"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Adelbert.Ryan@francisca.org",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Zieme",
-                    "firstname"   => "Faye",
+                    "surname" => "Zieme",
+                    "first_name" => "Faye",
                     "nationality" => "Guatemala",
-                    "email"       => "Joannie.Brown@sigurd.co.uk"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Joannie.Brown@sigurd.co.uk",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Beatty",
-                    "firstname"   => "Raleigh",
+                    "surname" => "Beatty",
+                    "first_name" => "Raleigh",
                     "nationality" => "British Antarctic Territory",
-                    "email"       => "Alessandra_Hayes@jamal.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Alessandra_Hayes@jamal.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Kuhic",
-                    "firstname"   => "Dolly",
+                    "surname" => "Kuhic",
+                    "first_name" => "Dolly",
                     "nationality" => "Paraguay",
-                    "email"       => "Sonny@golda.net"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Sonny@golda.net",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Koepp",
-                    "firstname"   => "Mikel",
+                    "surname" => "Koepp",
+                    "first_name" => "Mikel",
                     "nationality" => "Liberia",
-                    "email"       => "Rosella@cruz.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Rosella@cruz.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Pfannerstill",
-                    "firstname"   => "May",
+                    "surname" => "Pfannerstill",
+                    "first_name" => "May",
                     "nationality" => "Puerto Rico",
-                    "email"       => "Dave@carlee.me"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Dave@carlee.me",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Douglas",
-                    "firstname"   => "Otho",
+                    "surname" => "Douglas",
+                    "first_name" => "Otho",
                     "nationality" => "Denmark",
-                    "email"       => "Walter@karley.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Walter@karley.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Conroy",
-                    "firstname"   => "Napoleon",
+                    "surname" => "Conroy",
+                    "first_name" => "Napoleon",
                     "nationality" => "Afghanistan",
-                    "email"       => "Charley.Orn@frances.co.uk"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Charley.Orn@frances.co.uk",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Doyle",
-                    "firstname"   => "Elza",
+                    "surname" => "Doyle",
+                    "first_name" => "Elza",
                     "nationality" => "Liechtenstein",
-                    "email"       => "Isobel@simone.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Isobel@simone.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Schulist",
-                    "firstname"   => "Maci",
+                    "surname" => "Schulist",
+                    "first_name" => "Maci",
                     "nationality" => "United States",
-                    "email"       => "Reginald.Klein@keshawn.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Reginald.Klein@keshawn.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Hansen",
-                    "firstname"   => "Kyler",
+                    "surname" => "Hansen",
+                    "first_name" => "Kyler",
                     "nationality" => "Canada",
-                    "email"       => "Lorine@rebeka.com"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Lorine@rebeka.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Conn",
-                    "firstname"   => "Jean",
+                    "surname" => "Conn",
+                    "first_name" => "Jean",
                     "nationality" => "Kiribati",
-                    "email"       => "Zackary.Dickinson@gonzalo.info"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Zackary.Dickinson@gonzalo.info",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Yost",
-                    "firstname"   => "Reilly",
+                    "surname" => "Yost",
+                    "first_name" => "Reilly",
                     "nationality" => "South Africa",
-                    "email"       => "Herman@avis.me"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Herman@avis.me",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Quigley",
-                    "firstname"   => "Shad",
+                    "surname" => "Quigley",
+                    "first_name" => "Shad",
                     "nationality" => "Bhutan",
-                    "email"       => "Roy@judah.com"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Roy@judah.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Quitzon",
-                    "firstname"   => "Beatrice",
+                    "surname" => "Quitzon",
+                    "first_name" => "Beatrice",
                     "nationality" => "Timor-Leste",
-                    "email"       => "Jana@herta.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Jana@herta.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Langworth",
-                    "firstname"   => "Lonny",
+                    "surname" => "Langworth",
+                    "first_name" => "Lonny",
                     "nationality" => "New Zealand",
-                    "email"       => "Sophia.Paucek@jamir.net"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Sophia.Paucek@jamir.net",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Kiehn",
-                    "firstname"   => "Rosalinda",
+                    "surname" => "Kiehn",
+                    "first_name" => "Rosalinda",
                     "nationality" => "Dominican Republic",
-                    "email"       => "Gia@nestor.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Gia@nestor.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Parker",
-                    "firstname"   => "Rebekah",
+                    "surname" => "Parker",
+                    "first_name" => "Rebekah",
                     "nationality" => "Kyrgyzstan",
-                    "email"       => "Faustino@shane.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Faustino@shane.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Kuhlman",
-                    "firstname"   => "Rhoda",
+                    "surname" => "Kuhlman",
+                    "first_name" => "Rhoda",
                     "nationality" => "Gibraltar",
-                    "email"       => "Roel@kianna.net"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Roel@kianna.net",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Cruickshank",
-                    "firstname"   => "Judd",
+                    "surname" => "Cruickshank",
+                    "first_name" => "Judd",
                     "nationality" => "Macau SAR China",
-                    "email"       => "Bell@buddy.co.uk"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Bell@buddy.co.uk",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Yundt",
-                    "firstname"   => "Sarah",
+                    "surname" => "Yundt",
+                    "first_name" => "Sarah",
                     "nationality" => "Papua New Guinea",
-                    "email"       => "Marcia@noe.org"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Marcia@noe.org",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Pacocha",
-                    "firstname"   => "Russ",
+                    "surname" => "Pacocha",
+                    "first_name" => "Russ",
                     "nationality" => "Greenland",
-                    "email"       => "Shakira_Kessler@moriah.co.uk"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Shakira_Kessler@moriah.co.uk",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Purdy",
-                    "firstname"   => "Kali",
+                    "surname" => "Purdy",
+                    "first_name" => "Kali",
                     "nationality" => "Mauritania",
-                    "email"       => "Ignatius@madison.info"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Ignatius@madison.info",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Block",
-                    "firstname"   => "Janick",
+                    "surname" => "Block",
+                    "first_name" => "Janick",
                     "nationality" => "Belarus",
-                    "email"       => "Lamont@david.info"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Lamont@david.info",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Waelchi",
-                    "firstname"   => "Ford",
+                    "surname" => "Waelchi",
+                    "first_name" => "Ford",
                     "nationality" => "Paraguay",
-                    "email"       => "Marta.Grimes@malinda.org"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Marta.Grimes@malinda.org",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Batz",
-                    "firstname"   => "Francesca",
+                    "surname" => "Batz",
+                    "first_name" => "Francesca",
                     "nationality" => "Netherlands Antilles",
-                    "email"       => "Janie.Klocko@dallin.net"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Janie.Klocko@dallin.net",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Rogahn",
-                    "firstname"   => "Lukas",
+                    "surname" => "Rogahn",
+                    "first_name" => "Lukas",
                     "nationality" => "Cape Verde",
-                    "email"       => "Gage.Willms@ruben.me"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Gage.Willms@ruben.me",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Funk",
-                    "firstname"   => "Wilhelmine",
+                    "surname" => "Funk",
+                    "first_name" => "Wilhelmine",
                     "nationality" => "Zimbabwe",
-                    "email"       => "Daphne@darryl.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Daphne@darryl.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Nader",
-                    "firstname"   => "Jude",
+                    "surname" => "Nader",
+                    "first_name" => "Jude",
                     "nationality" => "Panama Canal Zone",
-                    "email"       => "Payton@rupert.org"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Payton@rupert.org",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Stroman",
-                    "firstname"   => "Frankie",
+                    "surname" => "Stroman",
+                    "first_name" => "Frankie",
                     "nationality" => "Saint Martin",
-                    "email"       => "Saul@gia.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Saul@gia.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Jaskolski",
-                    "firstname"   => "Mina",
+                    "surname" => "Jaskolski",
+                    "first_name" => "Mina",
                     "nationality" => "Bermuda",
-                    "email"       => "Amos_Effertz@jennie.info"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Amos_Effertz@jennie.info",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Zieme",
-                    "firstname"   => "Mack",
+                    "surname" => "Zieme",
+                    "first_name" => "Mack",
                     "nationality" => "Uzbekistan",
-                    "email"       => "Martin@isabelle.com"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Martin@isabelle.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Tromp",
-                    "firstname"   => "Celestine",
+                    "surname" => "Tromp",
+                    "first_name" => "Celestine",
                     "nationality" => "Peru",
-                    "email"       => "Loy@evalyn.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Loy@evalyn.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Nitzsche",
-                    "firstname"   => "Zella",
+                    "surname" => "Nitzsche",
+                    "first_name" => "Zella",
                     "nationality" => "New Zealand",
-                    "email"       => "Bridgette@gordon.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Bridgette@gordon.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Kuphal",
-                    "firstname"   => "Ila",
+                    "surname" => "Kuphal",
+                    "first_name" => "Ila",
                     "nationality" => "Maldives",
-                    "email"       => "Terrance.Rowe@mario.co.uk"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Terrance.Rowe@mario.co.uk",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Cruickshank",
-                    "firstname"   => "Eda",
+                    "surname" => "Cruickshank",
+                    "first_name" => "Eda",
                     "nationality" => "Jamaica",
-                    "email"       => "Abelardo@elza.ca"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Abelardo@elza.ca",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Koepp",
-                    "firstname"   => "Jaylen",
+                    "surname" => "Koepp",
+                    "first_name" => "Jaylen",
                     "nationality" => "Monaco",
-                    "email"       => "Norbert@kristian.io"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Norbert@kristian.io",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Kohler",
-                    "firstname"   => "Kristina",
+                    "surname" => "Kohler",
+                    "first_name" => "Kristina",
                     "nationality" => "Russia",
-                    "email"       => "Aidan@nona.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Aidan@nona.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Ondricka",
-                    "firstname"   => "Sean",
+                    "surname" => "Ondricka",
+                    "first_name" => "Sean",
                     "nationality" => "Turks and Caicos Islands",
-                    "email"       => "Kristin.Rolfson@madelyn.tv"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Kristin.Rolfson@madelyn.tv",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Leuschke",
-                    "firstname"   => "Estelle",
+                    "surname" => "Leuschke",
+                    "first_name" => "Estelle",
                     "nationality" => "Niue",
-                    "email"       => "Chauncey.Hoeger@jeramie.tv"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Chauncey.Hoeger@jeramie.tv",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Funk",
-                    "firstname"   => "Roselyn",
+                    "surname" => "Funk",
+                    "first_name" => "Roselyn",
                     "nationality" => "Djibouti",
-                    "email"       => "Korbin@hallie.io"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Korbin@hallie.io",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Romaguera",
-                    "firstname"   => "Kariane",
+                    "surname" => "Romaguera",
+                    "first_name" => "Kariane",
                     "nationality" => "Djibouti",
-                    "email"       => "Jocelyn_Fadel@lauryn.com"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Jocelyn_Fadel@lauryn.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Nitzsche",
-                    "firstname"   => "Adrian",
+                    "surname" => "Nitzsche",
+                    "first_name" => "Adrian",
                     "nationality" => "Guernsey",
-                    "email"       => "Markus.Gulgowski@nicolas.tv"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Markus.Gulgowski@nicolas.tv",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Windler",
-                    "firstname"   => "Maggie",
+                    "surname" => "Windler",
+                    "first_name" => "Maggie",
                     "nationality" => "Guernsey",
-                    "email"       => "Shayna.Lesch@donny.io"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Shayna.Lesch@donny.io",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Blanda",
-                    "firstname"   => "Ken",
+                    "surname" => "Blanda",
+                    "first_name" => "Ken",
                     "nationality" => "French Southern Territories",
-                    "email"       => "Modesta_Aufderhar@belle.co.uk"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Modesta_Aufderhar@belle.co.uk",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Reilly",
-                    "firstname"   => "Antone",
+                    "surname" => "Reilly",
+                    "first_name" => "Antone",
                     "nationality" => "Yemen",
-                    "email"       => "Ford@garfield.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Ford@garfield.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Cassin",
-                    "firstname"   => "Yadira",
+                    "surname" => "Cassin",
+                    "first_name" => "Yadira",
                     "nationality" => "Mayotte",
-                    "email"       => "Anastacio@murray.net"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Anastacio@murray.net",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Macejkovic",
-                    "firstname"   => "Marge",
+                    "surname" => "Macejkovic",
+                    "first_name" => "Marge",
                     "nationality" => "Slovakia",
-                    "email"       => "Retha@griffin.me"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Retha@griffin.me",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Feest",
-                    "firstname"   => "Rogers",
+                    "surname" => "Feest",
+                    "first_name" => "Rogers",
                     "nationality" => "Monaco",
-                    "email"       => "Keshawn_Kuvalis@orlando.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Keshawn_Kuvalis@orlando.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Fadel",
-                    "firstname"   => "Candelario",
+                    "surname" => "Fadel",
+                    "first_name" => "Candelario",
                     "nationality" => "Belarus",
-                    "email"       => "Kailee_Casper@reina.me"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Kailee_Casper@reina.me",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Shields",
-                    "firstname"   => "Eldridge",
+                    "surname" => "Shields",
+                    "first_name" => "Eldridge",
                     "nationality" => "Neutral Zone",
-                    "email"       => "Rachel_Block@olin.info"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Rachel_Block@olin.info",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Romaguera",
-                    "firstname"   => "Lavina",
+                    "surname" => "Romaguera",
+                    "first_name" => "Lavina",
                     "nationality" => "Canton and Enderbury Islands",
-                    "email"       => "Cathrine@virgie.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Cathrine@virgie.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Hessel",
-                    "firstname"   => "Matt",
+                    "surname" => "Hessel",
+                    "first_name" => "Matt",
                     "nationality" => "Czech Republic",
-                    "email"       => "Skyla@gonzalo.net"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Skyla@gonzalo.net",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Donnelly",
-                    "firstname"   => "Barrett",
+                    "surname" => "Donnelly",
+                    "first_name" => "Barrett",
                     "nationality" => "South Korea",
-                    "email"       => "Sheila.Abshire@david.io"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Sheila.Abshire@david.io",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Hagenes",
-                    "firstname"   => "Betty",
+                    "surname" => "Hagenes",
+                    "first_name" => "Betty",
                     "nationality" => "Samoa",
-                    "email"       => "Linda@monte.me"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Linda@monte.me",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Schmeler",
-                    "firstname"   => "Alphonso",
+                    "surname" => "Schmeler",
+                    "first_name" => "Alphonso",
                     "nationality" => "Palau",
-                    "email"       => "Raphael_Senger@vernon.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Raphael_Senger@vernon.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Shields",
-                    "firstname"   => "Selmer",
+                    "surname" => "Shields",
+                    "first_name" => "Selmer",
                     "nationality" => "Samoa",
-                    "email"       => "Michelle.Rice@pat.me"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Michelle.Rice@pat.me",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Kemmer",
-                    "firstname"   => "Earl",
+                    "surname" => "Kemmer",
+                    "first_name" => "Earl",
                     "nationality" => "Niger",
-                    "email"       => "Terry.Rau@brennan.com"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Terry.Rau@brennan.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Kunde",
-                    "firstname"   => "Sharon",
+                    "surname" => "Kunde",
+                    "first_name" => "Sharon",
                     "nationality" => "French Guiana",
-                    "email"       => "Julius@isabell.io"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Julius@isabell.io",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Jacobs",
-                    "firstname"   => "Jeffry",
+                    "surname" => "Jacobs",
+                    "first_name" => "Jeffry",
                     "nationality" => "Albania",
-                    "email"       => "Juliana.Stanton@magnolia.ca"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Juliana.Stanton@magnolia.ca",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Ritchie",
-                    "firstname"   => "Eliane",
+                    "surname" => "Ritchie",
+                    "first_name" => "Eliane",
                     "nationality" => "Chad",
-                    "email"       => "Kaleigh.Durgan@verner.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Kaleigh.Durgan@verner.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Erdman",
-                    "firstname"   => "Howard",
+                    "surname" => "Erdman",
+                    "first_name" => "Howard",
                     "nationality" => "Puerto Rico",
-                    "email"       => "Arthur_Stroman@quinn.com"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Arthur_Stroman@quinn.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Schimmel",
-                    "firstname"   => "Lance",
+                    "surname" => "Schimmel",
+                    "first_name" => "Lance",
                     "nationality" => "Serbia",
-                    "email"       => "Dovie.Williamson@alycia.org"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Dovie.Williamson@alycia.org",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Tillman",
-                    "firstname"   => "Elliott",
+                    "surname" => "Tillman",
+                    "first_name" => "Elliott",
                     "nationality" => "Botswana",
-                    "email"       => "Bethel@jess.com"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Bethel@jess.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Boyle",
-                    "firstname"   => "Emanuel",
+                    "surname" => "Boyle",
+                    "first_name" => "Emanuel",
                     "nationality" => "Tokelau",
-                    "email"       => "Claude@brent.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Claude@brent.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Feest",
-                    "firstname"   => "Norma",
+                    "surname" => "Feest",
+                    "first_name" => "Norma",
                     "nationality" => "Georgia",
-                    "email"       => "Abdullah.Terry@leonardo.net"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Abdullah.Terry@leonardo.net",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "O'Conner",
-                    "firstname"   => "Jenifer",
+                    "surname" => "O'Conner",
+                    "first_name" => "Jenifer",
                     "nationality" => "Nepal",
-                    "email"       => "Virgie@robert.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Virgie@robert.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Towne",
-                    "firstname"   => "Lilliana",
+                    "surname" => "Towne",
+                    "first_name" => "Lilliana",
                     "nationality" => "New Caledonia",
-                    "email"       => "Henri@breana.org"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Henri@breana.org",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Padberg",
-                    "firstname"   => "Verner",
+                    "surname" => "Padberg",
+                    "first_name" => "Verner",
                     "nationality" => "Seychelles",
-                    "email"       => "Florencio@barney.com"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Florencio@barney.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Stiedemann",
-                    "firstname"   => "Adelia",
+                    "surname" => "Stiedemann",
+                    "first_name" => "Adelia",
                     "nationality" => "Greece",
-                    "email"       => "Jessika.Nader@glennie.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Jessika.Nader@glennie.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Turcotte",
-                    "firstname"   => "Tristin",
+                    "surname" => "Turcotte",
+                    "first_name" => "Tristin",
                     "nationality" => "Nauru",
-                    "email"       => "Joyce_Jaskolski@emmalee.name"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Joyce_Jaskolski@emmalee.name",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Pouros",
-                    "firstname"   => "Cooper",
+                    "surname" => "Pouros",
+                    "first_name" => "Cooper",
                     "nationality" => "Micronesia",
-                    "email"       => "Chase_Kub@emely.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Chase_Kub@emely.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Romaguera",
-                    "firstname"   => "Judy",
+                    "surname" => "Romaguera",
+                    "first_name" => "Judy",
                     "nationality" => "Australia",
-                    "email"       => "Charlotte@earl.info"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Charlotte@earl.info",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Tremblay",
-                    "firstname"   => "Maxie",
+                    "surname" => "Tremblay",
+                    "first_name" => "Maxie",
                     "nationality" => "French Guiana",
-                    "email"       => "Annamae.Upton@roma.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Annamae.Upton@roma.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Barrows",
-                    "firstname"   => "Akeem",
+                    "surname" => "Barrows",
+                    "first_name" => "Akeem",
                     "nationality" => "Mozambique",
-                    "email"       => "Wellington@mara.ca"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Wellington@mara.ca",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Funk",
-                    "firstname"   => "Florencio",
+                    "surname" => "Funk",
+                    "first_name" => "Florencio",
                     "nationality" => "Malawi",
-                    "email"       => "Kenna@vicky.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Kenna@vicky.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Welch",
-                    "firstname"   => "Margarita",
+                    "surname" => "Welch",
+                    "first_name" => "Margarita",
                     "nationality" => "Ethiopia",
-                    "email"       => "Wellington_Cormier@novella.tv"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Wellington_Cormier@novella.tv",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Legros",
-                    "firstname"   => "Helmer",
+                    "surname" => "Legros",
+                    "first_name" => "Helmer",
                     "nationality" => "Antigua and Barbuda",
-                    "email"       => "Ubaldo@bessie.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Ubaldo@bessie.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Labadie",
-                    "firstname"   => "Carole",
+                    "surname" => "Labadie",
+                    "first_name" => "Carole",
                     "nationality" => "Martinique",
-                    "email"       => "Josh@kelvin.io"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Josh@kelvin.io",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Klein",
-                    "firstname"   => "Desiree",
+                    "surname" => "Klein",
+                    "first_name" => "Desiree",
                     "nationality" => "Nepal",
-                    "email"       => "Isidro_Homenick@jerald.biz"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Isidro_Homenick@jerald.biz",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Kuvalis",
-                    "firstname"   => "Eloy",
+                    "surname" => "Kuvalis",
+                    "first_name" => "Eloy",
                     "nationality" => "Panama Canal Zone",
-                    "email"       => "Annabelle_Okuneva@christelle.com"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Annabelle_Okuneva@christelle.com",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Macejkovic",
-                    "firstname"   => "Lucinda",
+                    "surname" => "Macejkovic",
+                    "first_name" => "Lucinda",
                     "nationality" => "Austria",
-                    "email"       => "Ada_Wuckert@kirk.us"
-                    ,
-                    "address_id"  => rand(0, 88),
-                    "course_id"   => rand(0, 199)
+                    "email" => "Ada_Wuckert@kirk.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
                 ],
                 [
-                    "surname"     => "Bosco",
-                    "firstname"   => "Emilia",
+                    "surname" => "Bosco",
+                    "first_name" => "Emilia",
                     "nationality" => "São Tomé and Príncipe",
-                    "email"       => "Yasmin@darwin.us"
-                ]
+                    "email" => "Yasmin@darwin.us",
+                    "address_id" => rand(0, 88),
+                    "course_id" => rand(0, 199),
+                ],
             ];
 
             foreach ($students as $student) {
-                Students::create($student);
+                Student::create($student);
             }
         }
     }
