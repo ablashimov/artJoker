@@ -1,0 +1,1 @@
+This is testing task for artjoker company
