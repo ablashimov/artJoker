@@ -8,9 +8,14 @@ class Student extends Model
 {
     public $timestamps = false;
 
-    public function course()
+    public function courses()
     {
-        return $this->belongsTo(Course::class);
+        return $this->belongsToMany(Course::class, 'students_courses');
+    }
+
+    public function studentsCourses()
+    {
+        return $this->hasMany(StudentCourse::class);
     }
 
     public function address()

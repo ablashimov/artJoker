@@ -24,8 +24,8 @@ class ExportRequest extends FormRequest
     public function rules()
     {
         return [
-            'studentsId' => 'required|array',
-            'studentsId.*' => 'integer',
+            'data' => 'required',
+            'data.*' => 'required_if:data,array',
         ];
     }
 }

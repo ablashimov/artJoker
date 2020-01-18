@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ExportRequest;
+use App\Models\Course;
 use App\Models\Student;
 use App\Services\Csv\CsvExporter;
 
@@ -15,16 +16,13 @@ class ExportController extends Controller
      */
     public function exportStudentsToCSV(ExportRequest $request): string
     {
-        $students = Student::query()->whereIn('id', $request->all()['studentsId'])->get()->toArray();
+        $query = Student::query();
 
-        return (new CsvExporter($students))->export();
-    }
+        if ($request->all()['data'] != 'all') {
+            $query->whereIn('id', $request->all()['data']);
+        }
 
-    public function exportAllStudentsToCSV(): string
-    {
-        $students = Student::query()->get()->toArray();
-
-        return (new CsvExporter($students))->export();
+        return (new CsvExporter($query->get()->toArray()))->export();
     }
 
     /**
@@ -32,6 +30,11 @@ class ExportController extends Controller
      */
     public function exportCourseAttendanceToCSV()
     {
+        $students = Student::query()
+            ->has('studentsCourses', '=', Course::query()->count())
+            ->get()
+            ->toArray();
 
+        return (new CsvExporter($students))->export();
     }
 }

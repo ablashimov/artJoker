@@ -79,7 +79,8 @@
                 <div><img src="/images/logo_sm.jpg" alt="Logo" title="logo"></div>
                 <div style='margin: 10px;  text-align: left'>
                     <input type="button" onClick="exportToCsv()" value="Export selected fields"/>
-                    <input type="button" onClick="exportAllToCsv()" value="Export all"/>
+                    <input type="button" onClick="exportToCsv('all')" value="Export all"/>
+                    <input type="button" onClick="exportStudentsHaveAllCurses()" value="Export students which register all courses"/>
                 </div>
                 <div style='margin: 10px;  text-align: left' id="div_error"></div>
             </div>
@@ -102,8 +103,16 @@
                                 <td style=' text-align: left;'>{{$student->first_name}}</td>
                                 <td style=' text-align: left;'>{{$student->surname}}</td>
                                 <td style=' text-align: left;'>{{$student->email}}</td>
-                                <td style=' text-align: left;'>{{$student->course->university}}</td>
-                                <td style=' text-align: left;'>{{$student->course->course_name}}</td>
+                                <td style=' text-align: left;'>
+                                    @foreach($student->courses as $course)
+                                    <p>{{$course->university}}</p>
+                                    @endforeach
+                                </td>
+                                <td style=' text-align: left;'>
+                                    @foreach($student->courses as $course)
+                                        <p>{{$course->course_name}}</p>
+                                    @endforeach
+                                </td>
                             </tr>
                         @endforeach
                     </table>
@@ -117,18 +126,22 @@
         @endif
     </body>
     <script>
-        function exportToCsv() {
-            var studentsId = [];
-
-            $("input:checkbox[name=studentId]:checked").each(function () {
-                studentsId.push($(this).val());
-            });
+        function exportToCsv(type) {
+            var data;
+            if (!type) {
+                data = [];
+                $("input:checkbox[name=studentId]:checked").each(function () {
+                    data.push($(this).val());
+                });
+            }else {
+                data = 'all';
+            }
 
             $.ajax({
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                 type: 'post',
-                data: {'studentsId': studentsId},
-                url: 'export',
+                data: {'data': data},
+                url: "{{route('students.export')}}",
                 error: function (errors) {
                     errorFields(errors)
                 },
@@ -140,11 +153,11 @@
             });
         }
 
-        function exportAllToCsv() {
+        function exportStudentsHaveAllCurses() {
             $.ajax({
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                 type: 'get',
-                url: 'export-all',
+                url: "{{route('students.export-register-all-courses')}}",
                 error: function (errors) {
                     errorFields(errors)
                 },
