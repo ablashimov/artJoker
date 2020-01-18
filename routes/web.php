@@ -14,4 +14,5 @@ Route::get('', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'students', 'as' => 'students.'], function () {
     Route::get('/', 'StudentController@index')->name('index');
 });
-Route::get('export', ['uses' => 'ExportController@export', 'as' => 'export']);
+Route::post('export', 'ExportController@exportStudentsToCSV')->name('export');
+Route::get('export-all', 'ExportController@exportAllStudentsToCSV')->name('export-all');

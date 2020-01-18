@@ -65,7 +65,12 @@
                 margin-right: 5px; /* Отступ слева */
                 padding: 3px; /* Поля вокруг текста */
             }
+
+            .has-error {
+                color: red
+            }
         </style>
+        <script src="{{ asset('js/app.js') }}"></script>
     </head>
 
     <body>
@@ -73,12 +78,14 @@
             <div class="header">
                 <div><img src="/images/logo_sm.jpg" alt="Logo" title="logo"></div>
                 <div style='margin: 10px;  text-align: left'>
-                    <input type="button" value="Select All"/>
-                    <input type="button" value="Export"/>
+                    <input type="button" onClick="exportToCsv()" value="Export selected fields"/>
+                    <input type="button" onClick="exportAllToCsv()" value="Export all"/>
                 </div>
+                <div style='margin: 10px;  text-align: left' id="div_error"></div>
             </div>
 
             <form>
+                <meta name="csrf-token" content="{{ csrf_token() }}"/>
                 <div style='margin: 10px; text-align: center;'>
                     <table class="student-table">
                         <tr>
@@ -91,12 +98,12 @@
                         </tr>
                         @foreach($students as $student)
                             <tr>
-                                <td><input type="checkbox" name="studentId" value="{{$student['id']}}"></td>
-                                <td style=' text-align: left;'>{{$student['first_name']}}</td>
-                                <td style=' text-align: left;'>{{$student['surname']}}</td>
-                                <td style=' text-align: left;'>{{$student['email']}}</td>
-                                <td style=' text-align: left;'>{{$student['course']['university']}}</td>
-                                <td style=' text-align: left;'>{{$student['course']['course_name']}}</td>
+                                <td><input type="checkbox" name="studentId" value="{{$student->id}}"></td>
+                                <td style=' text-align: left;'>{{$student->first_name}}</td>
+                                <td style=' text-align: left;'>{{$student->surname}}</td>
+                                <td style=' text-align: left;'>{{$student->email}}</td>
+                                <td style=' text-align: left;'>{{$student->course->university}}</td>
+                                <td style=' text-align: left;'>{{$student->course->course_name}}</td>
                             </tr>
                         @endforeach
                     </table>
@@ -109,5 +116,65 @@
             </tr>
         @endif
     </body>
+    <script>
+        function exportToCsv() {
+            var studentsId = [];
+
+            $("input:checkbox[name=studentId]:checked").each(function () {
+                studentsId.push($(this).val());
+            });
+
+            $.ajax({
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                type: 'post',
+                data: {'studentsId': studentsId},
+                url: 'export',
+                error: function (errors) {
+                    errorFields(errors)
+                },
+                success: function (response) {
+                    $('#div_error').removeClass("has-error").text('');
+
+                    download(response);
+                }
+            });
+        }
+
+        function exportAllToCsv() {
+            $.ajax({
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                type: 'get',
+                url: 'export-all',
+                error: function (errors) {
+                    errorFields(errors)
+                },
+                success: function (response) {
+                    $('#div_error').removeClass("has-error").text('');
+
+                    download(response);
+                }
+            });
+        }
+
+        function download(response) {
+            let link = document.createElement('a');
+            link.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(response));
+            link.setAttribute('download', 'Students.csv');
+            document.body.appendChild(link);
+            link.click();
+        }
+
+        function errorFields(errors) {
+            if (!errors.responseText) {
+                return false
+            }
+
+            errors = JSON.parse(errors.responseText);
+            var key = Object.keys(errors);
+            key.forEach(function (id) {
+                $('#div_error').addClass("has-error").text(errors[id][0]);
+            });
+        }
+    </script>
 
 </html>

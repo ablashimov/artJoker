@@ -97,6 +97,9 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'studentsId' => [
+            'required' => 'Select at least one student'
+        ]
     ],
 
     /*

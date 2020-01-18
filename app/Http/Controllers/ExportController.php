@@ -2,17 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ExportRequest;
 use App\Models\Student;
-use Illuminate\Http\Request;
+use App\Services\Csv\CsvExporter;
 
 class ExportController extends Controller
 {
     /**
-     * Exports all student data to a CSV file
+     * Exports student data to a CSV file
+     * @param ExportRequest $request
+     * @return string
      */
-    public function exportStudentsToCSV()
+    public function exportStudentsToCSV(ExportRequest $request): string
     {
+        $students = Student::query()->whereIn('id', $request->all()['studentsId'])->get()->toArray();
 
+        return (new CsvExporter($students))->export();
+    }
+
+    public function exportAllStudentsToCSV(): string
+    {
+        $students = Student::query()->get()->toArray();
+
+        return (new CsvExporter($students))->export();
     }
 
     /**
